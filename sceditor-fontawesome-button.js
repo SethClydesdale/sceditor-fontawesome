@@ -19,6 +19,7 @@ $.sceditor.command.set('fontawesome', {
     return c;
   },
 
+  // if you want to add a default size for the icons, simply add the size tags into insert()
   // wysiwyg
   exec : function(c) {
     var e = this;
