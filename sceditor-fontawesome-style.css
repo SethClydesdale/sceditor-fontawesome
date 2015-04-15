@@ -1,0 +1,20 @@
+.sceditor-container textarea { font-family:Verdana, Arial, Helvetica, sans-serif, FontAwesome } /* Add fontawesome to the textarea font family so the icons are visible */
+.sceditor-button-fontawesome div { background:url(http://i19.servimg.com/u/f19/19/06/98/92/fa-f10.png) } /* button image */
+
+/* drop down */
+.sceditor-fontawesome {
+  width:220px;
+  height:250px;
+  overflow-y:auto;
+}
+
+/* icons */
+.sceditor-fontawesome i {
+  color:#333;
+  font-size:20px;
+  text-align:center;
+  cursor:pointer;
+  padding:3px 0;
+  width:25%;
+}
+.sceditor-fontawesome i:hover { color:#666 }
