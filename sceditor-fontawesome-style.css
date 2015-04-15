@@ -1,10 +1,14 @@
-.sceditor-container textarea { font-family:Verdana, Arial, Helvetica, sans-serif, FontAwesome } /* Add fontawesome to the textarea font family so the icons are visible */
-.sceditor-button-fontawesome div { background:url(http://i19.servimg.com/u/f19/19/06/98/92/fa-f10.png) } /* button image */
+/* Add fontawesome to the textarea font family so the icons are visible */
+.sceditor-container textarea { font-family:Verdana, Arial, Helvetica, sans-serif, FontAwesome }
+
+/* button image */
+.sceditor-button-fontawesome div { background:url(http://i19.servimg.com/u/f19/19/06/98/92/fa-f10.png) }
 
 /* drop down */
 .sceditor-fontawesome {
   width:220px;
   height:250px;
+  overflow-x:hidden;
   overflow-y:auto;
 }
 
