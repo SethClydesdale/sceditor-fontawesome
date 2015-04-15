@@ -1,6 +1,6 @@
 // The purpose of this script is to quickly pull all icons from the font awesome cheatsheet ( http://fortawesome.github.io/Font-Awesome/cheatsheet/ )
-// It's a helper for forming an array or object of all font awesome icons
-// It should be executed in the console or the Firefox scratchpad, after execution a textarea will appear with an icon list
+// It's a helper for forming an array or object of all font awesome icons to be used in the SCEditor command
+// The script should be executed in the console or the Firefox scratchpad, after execution a textarea will appear with an icon list
 
 (function() {
   // type 0 = array icon list
@@ -22,13 +22,7 @@
   config.type ? v += '};' : v += '];';
   
   t.value = v;
-  t.style.position = 'fixed';
-  t.style.fontFamily = 'FontAwesome';
-  t.style.left = 0;
-  t.style.bottom = 0;
-  t.style.zIndex = 9999;
-  t.style.width = '100%';
-  t.style.height = '200px';
+  t.setAttribute('style','position:fixed;left:0;bottom:0;z-index:9999;width:100%;height:200px;font-family:FontAwesome;');
   t.onclick = function() { this.select() };
   document.body.appendChild(t);
 })();
