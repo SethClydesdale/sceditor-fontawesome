@@ -2,7 +2,13 @@
 
 This is a command for using all FontAwesome icons in the SCEditor, similar to the emoticons. You can find an example [here](http://opensource.olympe.in/ex/scefa/).
 
-The command for the button can be copied from [here](https://raw.githubusercontent.com/SethClydesdale/sceditor-fontawesome/master/sceditor-fontawesome-button.js), or the repository above. Also, make sure to include the [style](https://raw.githubusercontent.com/SethClydesdale/sceditor-fontawesome/master/sceditor-fontawesome-style.css) for the drop down and icons. The first rule can be ignored, but make sure to include the FontAwesome font in your font-family declaration so the icons appear in source mode.
+The command for the button can be copied from the repository above, I'll leave an explanation of the two command files. 
+
+**[Simple](https://github.com/SethClydesdale/sceditor-fontawesome/blob/master/button-simple.js) :** The simple button contains the icons in an array without any tooltips when hovering the icons.
+
+**[Advanced](https://github.com/SethClydesdale/sceditor-fontawesome/blob/master/button-advanced.js) :** The advanced button contains the icons in an object in **class:icon** pairs. The class is used as a tooltip when hovering the icon.
+
+Also, make sure to include the [style](https://github.com/SethClydesdale/sceditor-fontawesome/blob/master/styles.css) for the drop down and icons. The first rule can be ignored, but make sure to include the FontAwesome font in your font-family declaration so the icons appear in source mode.
 
 
 ### Why can't I see the icons ?
