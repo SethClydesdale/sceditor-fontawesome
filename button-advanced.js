@@ -543,7 +543,7 @@ $.sceditor.command.set('fontawesome', {
   exec : function(c) {
     var e = this;
     e.createDropDown(c, 'fontawesome', $.sceditor.command.get('fontawesome').createDropdown(e, function(icon) {
-      e.insert('[font=FontAwesome]' + icon + '[/font]','');
+      e.insert('&nbsp;[font=FontAwesome]' + icon + '[/font]&nbsp;', '', true, true, true);
     }));
   },
   
@@ -551,7 +551,7 @@ $.sceditor.command.set('fontawesome', {
   txtExec : function(c) {
     var e = this;
     e.createDropDown(c, 'fontawesome', $.sceditor.command.get('fontawesome').createDropdown(e, function(icon) {
-      e.insert('[font=FontAwesome]' + icon + '[/font]','');
+      e.insert(' [font=FontAwesome]' + icon + '[/font] ', '');
     }));
   },
     
