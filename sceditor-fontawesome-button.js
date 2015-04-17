@@ -8,8 +8,8 @@ $.sceditor.command.set('fontawesome', {
     var c = $('<div />');
 
     for (i=0; i<j; i++) {
-      $('<i class="fa">' + fa[i] + '</i>').data('fa-icon', fa[i]).click(function(e) {
-        callback($(this).data('fa-icon'));
+      $('<i class="fa">' + fa[i] + '</i>').click(function(e) {
+        callback($(this).text());
 
         editor.closeDropDown(true);
         e.preventDefault();
@@ -24,7 +24,7 @@ $.sceditor.command.set('fontawesome', {
   exec : function(c) {
     var e = this;
     e.createDropDown(c, 'fontawesome', $.sceditor.command.get('fontawesome').createDropdown(e, function(icon) {
-      e.insert('[font=FontAwesome]' + icon + '[/font]');
+      e.insert('[font=FontAwesome]' + icon + '[/font]','');
     }));
   },
   
@@ -32,7 +32,7 @@ $.sceditor.command.set('fontawesome', {
   txtExec : function(c) {
     var e = this;
     e.createDropDown(c, 'fontawesome', $.sceditor.command.get('fontawesome').createDropdown(e, function(icon) {
-      e.insert('[font=FontAwesome]' + icon + '[/font]');
+      e.insert('[font=FontAwesome]' + icon + '[/font]','');
     }));
   },
     
