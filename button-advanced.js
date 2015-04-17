@@ -556,3 +556,4 @@ $.sceditor.command.set('fontawesome', {
   },
     
   tooltip : 'Font Awesome Icons'
+});
