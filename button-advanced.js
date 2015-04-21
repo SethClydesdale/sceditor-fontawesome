@@ -544,7 +544,7 @@ $.sceditor.command.set('fontawesome', {
     var e = this;
     $.sceditor.command.get('fontawesome').dropDown(e, c, function(icon) {
       e.insert('&nbsp;[font=FontAwesome]' + icon + '[/font]&nbsp;', '', true, true, true);
-    }));
+    });
   },
   
   // source  
@@ -552,7 +552,7 @@ $.sceditor.command.set('fontawesome', {
     var e = this;
     $.sceditor.command.get('fontawesome').dropDown(e, c, function(icon) {
       e.insert(' [font=FontAwesome]' + icon + '[/font] ', '');
-    }));
+    });
   },
     
   tooltip : 'Font Awesome Icons'
