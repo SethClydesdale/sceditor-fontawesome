@@ -523,7 +523,7 @@ var fa = {
   
 // create sceditor button and drop down
 $.sceditor.command.set('fontawesome', {
-  createDropdown : function(editor, callback) {
+  dropDown : function(editor, caller, callback) {
     var c = $('<div />');
 
     for (var i in fa) {
@@ -535,14 +535,14 @@ $.sceditor.command.set('fontawesome', {
       }).appendTo(c);
     }
 
-    return c;
+    editor.createDropDown(caller, 'fontawesome', c);
   },
 
   // if you want to add a default size for the icons, simply add the size tags into insert()
   // wysiwyg
   exec : function(c) {
     var e = this;
-    e.createDropDown(c, 'fontawesome', $.sceditor.command.get('fontawesome').createDropdown(e, function(icon) {
+    $.sceditor.command.get('fontawesome').dropDown(e, c, function(icon) {
       e.insert('&nbsp;[font=FontAwesome]' + icon + '[/font]&nbsp;', '', true, true, true);
     }));
   },
@@ -550,7 +550,7 @@ $.sceditor.command.set('fontawesome', {
   // source  
   txtExec : function(c) {
     var e = this;
-    e.createDropDown(c, 'fontawesome', $.sceditor.command.get('fontawesome').createDropdown(e, function(icon) {
+    $.sceditor.command.get('fontawesome').dropDown(e, c, function(icon) {
       e.insert(' [font=FontAwesome]' + icon + '[/font] ', '');
     }));
   },
