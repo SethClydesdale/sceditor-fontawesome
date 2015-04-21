@@ -13,7 +13,7 @@ $.sceditor.command.set('fontawesome', {
     for (a = c.getElementsByTagName('I'), i = 0, j = a.length; i<j; i++) {
       a[i].onclick = function() {
         callback(this.innerHTML);
-        autoClose && editor.closeDropDown(true);
+        editor.closeDropDown(true);
       }
     }
 
