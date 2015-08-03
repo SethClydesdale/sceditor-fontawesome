@@ -6,16 +6,16 @@
   // type 0 = array icon list
   // type 1 = object icon list
   var config = {
-    type : 0,
+    type : 1,
     ignoreAlias : 1 // decide if you want to ignore the alias'
   },
-  a = $('.row')[0].getElementsByTagName('DIV'), i = 0, j = a.length, t = document.createElement('TEXTAREA'), v = '';
+  a = $('.container > .row > div'), i = 0, j = a.length, t = document.createElement('TEXTAREA'), v = '';
   
   config.type ? v += 'var fa = {\n' : v += 'var fa = [';
   
   for (; i<j; i++) {
     if (config.ignoreAlias && /\(alias\)/.test(a[i].innerHTML)) console.log('Skipping alias..');
-    else if (config.type) v += '  \'' + a[i].innerHTML.replace(/<.*?>/g,'').trim().slice(1).replace(/\[.*?\]|\(.*?\)/g,'').trim().slice(3) + '\' : \'' + a[i].getElementsByTagName('I')[0].innerHTML + '\'' + ( i == j - 1 ? '' : ',' ) + '\n';
+    else if (config.type) v += '  \'' + a[i].innerHTML.replace(/<.*?>.*?<\/.*?>|\s+/g, '').slice(3) + '\' : \'' + a[i].getElementsByTagName('I')[0].innerHTML + '\'' + ( i == j - 1 ? '' : ',' ) + '\n';
     else if (!config.type) v += '\'' + a[i].getElementsByTagName('I')[0].innerHTML + '\'' + ( i == j - 1 ? '' : ',' );
   }
   
